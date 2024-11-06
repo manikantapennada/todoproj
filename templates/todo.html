@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Todo Application</h1>
+    {% if user.is_authenticated %} {{ user.username }}
+    <a href="/accounts/logout">Logout</a>
+    {% else %}
+    <a href="/accounts/login">Login</a>
+    {% endif %}
+    
+    <hr/>
+    <form method="POST">
+      {% csrf_token %}
+      <p><input type="text" name="task" /><button>Add</button></p>
+    </form>
+
+    {% for row in todos%}
+    <div>{{row.task}} <a href="/deleteTodo/?id={{row.id}}">Delete</a></div>
+    {% endfor %}
+  </body>
+</html>
