@@ -19,7 +19,9 @@ from django.urls import path,include
 from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.todo),
+    path('logout',views.logout_view),
+    # path('',views.todo),
+    path('',views.product),
     path('deleteTodo/',views.deleteTodo), 
     path('accounts/', include("django.contrib.auth.urls")),
     path('signup/',views.signup),
