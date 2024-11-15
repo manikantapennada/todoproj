@@ -7,8 +7,8 @@
 </head>
 <body>
     <div style="display:flex; background-color: yellow; justify-content: space-between; padding: 10px; ">
-    <div>Shopping Site🛒</div>
-    <div>
+    <div style="margin-left: 450px; font-size: xx-large; font-family:Georgia, 'Times New Roman', Times, serif;">🛒Shopping Site🛒</div>
+    <div style="margin-top: 25px;">
     {% if user.is_authenticated %} {{ user.username }}
     <a href="/logout">Logout</a>
     {% else %}

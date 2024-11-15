@@ -3,11 +3,12 @@
 {% block content%}
 <div style="display:flex;justify-content: center; ">
     {% for product in products %}
-      <div style="margin:5px;background-color: silver;">
+      <div style="margin:5px;background-color: silver; border-radius: 3px;">
         <img src={{product.url}}>
-      <h3>{{product.name}}</h3>
-      <p>{{product.desc}}</p>
-      <h4>{{product.price}}</h4>
+      <h3 style="color: brown; margin-left: 2px;">{{product.name}}</h3>
+      <p style="margin-left: 2px;">{{product.desc}}</p>
+      <h4 style="color: orangered; margin-left: 4px;">{{product.price}}</h4>
+      <button style="border-radius: 2px; background-color: black; color: white; margin-left: 2px; margin-bottom: 5px; cursor: grab; ">Add to Cart ✅</button>
       </div>
       {% endfor %}
     </div>
